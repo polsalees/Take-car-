@@ -1,9 +1,14 @@
-from PyQt5.QtWidgets import QMainWindow
-from PyQt5.uic import loadUi
+import sys
+from PyQt5.QtWidgets import QApplication, QMainWindow
 
 class MainWindow(QMainWindow):
     def __init__(self):
-        super(MainWindow, self).__init__()
-        loadUi('ui/main_window.ui', self)
+        super().__init__()
+        self.setWindowTitle("Car Tracker App")
+        self.setGeometry(100, 100, 600, 400)  # Set the window size
 
-        # Add logic for buttons, forms, and database interactions
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    window = MainWindow()
+    window.show()
+    sys.exit(app.exec_())
