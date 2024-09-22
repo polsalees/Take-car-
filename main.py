@@ -1,12 +1,14 @@
+from PyQt5 import QtWidgets, uic
 import sys
-from PyQt5.QtWidgets import QApplication
-from views.main_window import Ui_MainWindow
+from ui.dialogs import MainUi
+
 
 def main():
-    app = QApplication(sys.argv)
-    window = Ui_MainWindow()
+    app = QtWidgets.QApplication(sys.argv)
+    
+    window = MainUi()
     window.show()
-    sys.exit(app.exec_())
+    app.exec_()
 
 if __name__ == "__main__":
     main()

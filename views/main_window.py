@@ -11,8 +11,8 @@
 import sys
 from PyQt5 import uic, QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QDialog
-from sign_up import Ui_sign_up_dialog
-from signing_in import signing_in_dialog
+from .sign_up import UI_sign_up_dialog
+from .signing_in import signing_in_dialog
 
 
 class UI_MainWindow(object):
@@ -171,7 +171,7 @@ class UI_MainWindow(object):
 class sign_up_window(QtWidgets.QDialog):
     def __init__(self, parent=None):
         super(sign_up_window, self).__init__(parent)
-        self.ui = Ui_sign_up_dialog()  # Instantiate the generated UI class
+        self.ui = UI_sign_up_dialog()  # Instantiate the generated UI class
         self.ui.setupUi(self)  # Set up the UI for this dialog window
 
         

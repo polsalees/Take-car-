@@ -11,7 +11,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_sign_up_dialog(object):
+class UI_sign_up_dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("sign_up_dialog")
         Dialog.setWindowModality(QtCore.Qt.ApplicationModal)
@@ -83,7 +83,7 @@ if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
     Dialog = QtWidgets.QDialog()
-    ui = Ui_sign_up_dialog()
+    ui = UI_sign_up_dialog()
     ui.setupUi(Dialog)
     Dialog.show()
     sys.exit(app.exec_())
