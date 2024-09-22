@@ -12,15 +12,7 @@ import sys
 from PyQt5 import uic, QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QDialog
 from sign_up import Ui_sign_up_dialog
-
-
-
-
-class sign_up_window(QtWidgets.QDialog):
-    def __init__(self, parent=None):
-        super(sign_up_window, self).__init__(parent)
-        self.ui = Ui_sign_up_dialog()  # Instantiate the generated UI class
-        self.ui.setupUi(self)  # Set up the UI for this dialog window
+from signing_in import signing_in_dialog
 
 
 class UI_MainWindow(object):
@@ -100,6 +92,7 @@ class UI_MainWindow(object):
         font.setPointSize(12)
         self.sign_in_button.setFont(font)
         self.sign_in_button.setObjectName("sign_in_button")
+        self.sign_in_button.clicked.connect(self.open_signing_in_dialog)
         
         # Adding "SIGN-IN" button to the vertical layout
         self.verticalLayout.addWidget(self.sign_in_button)
@@ -169,6 +162,17 @@ class UI_MainWindow(object):
         #Create an instance of the dialog and show it
         self.sign_up_dialog = sign_up_window()
         self.sign_up_dialog.show()
+
+    
+    def open_signing_in_dialog(self):
+        self.dialog = signing_in_dialog()
+        self.dialog.exec_()
+
+class sign_up_window(QtWidgets.QDialog):
+    def __init__(self, parent=None):
+        super(sign_up_window, self).__init__(parent)
+        self.ui = Ui_sign_up_dialog()  # Instantiate the generated UI class
+        self.ui.setupUi(self)  # Set up the UI for this dialog window
 
         
     

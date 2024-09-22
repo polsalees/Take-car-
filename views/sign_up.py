@@ -13,7 +13,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 class Ui_sign_up_dialog(object):
     def setupUi(self, Dialog):
-        Dialog.setObjectName("sing_up_dialog")
+        Dialog.setObjectName("sign_up_dialog")
         Dialog.setWindowModality(QtCore.Qt.ApplicationModal)
         Dialog.resize(400, 164)
         Dialog.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
